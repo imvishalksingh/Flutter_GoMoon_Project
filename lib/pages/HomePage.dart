@@ -13,7 +13,6 @@ class HomePage extends StatelessWidget {
       // backgroundColor: Colors.green,
       body: SafeArea(
         child: Container(
-          color: Colors.red,
           height: _screenHeight,
           width: _screenWidth,
           padding: EdgeInsets.symmetric(horizontal: _screenWidth * 0.05),
@@ -78,13 +77,13 @@ class HomePage extends StatelessWidget {
   }
 
   Widget GoMoonBtn() {
-    return Container(
-      width: _screenWidth,
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(10),
-      ),
-      child: MaterialButton(onPressed: () {}, child: Text("GoMoon")),
+    return MaterialButton(
+      color: Colors.white,
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+      height: 50,
+      minWidth: _screenWidth,
+      onPressed: () {},
+      child: Text("GoMoon"),
     );
   }
 
